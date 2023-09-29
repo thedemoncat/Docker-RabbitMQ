@@ -12,13 +12,13 @@ services:
       PROVISIONING_CONTAINER_PATH: /tmp/provisioning
       RABBITMQ_LOGS: /var/log/rabbitmq/rabbit.log
       RABBITMQ_SASL_LOGS: /var/log/rabbitmq/rabbit-sasl.log
-    image: docker-rmq
-    build:
-      # Build from the rabbitmq/ folder provided in the repo.
-      # with the arguments passed.
-      context: rabbitmq/
-      args: 
-        RMQ_VERSION_TAG: 3.9.3-management
+    image: rabbitmq:management-alpine
+    # build:
+    #   # Build from the rabbitmq/ folder provided in the repo.
+    #   # with the arguments passed.
+    #   context: rabbitmq/
+    #   args: 
+    #     RMQ_VERSION_TAG: 3.9.3-management
     # Set a hostname and container name for the container
     hostname: docker-rmq.local
     container_name: docker-rmq.local
