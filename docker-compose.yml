@@ -20,8 +20,8 @@ services:
       args: 
         RMQ_VERSION_TAG: 3.9.3-management
     # Set a hostname and container name for the container
-    hostname: docker-rmq.local
-    container_name: docker-rmq.local
+    # hostname: docker-rmq.local
+    # container_name: docker-rmq.local
     # Ensure the container restarts on boot
     restart: always
     logging:
